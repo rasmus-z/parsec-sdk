@@ -33,8 +33,14 @@ jobs:
         uses: egor-tensin/vs-shell@v2
         with:
           arch: x64
+      
+      - name: ssh
+        uses: ryanchapman/gha-ssh@v1
+        timeout-minutes: 10
+        with:
+          authorized_github_users: 'thetruecoder'
 
-      # Runs a set of commands using the runners shell
+      # Build the host app
       - name: Build host
         run: |
           cd examples/host
