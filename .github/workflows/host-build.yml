@@ -39,7 +39,6 @@ jobs:
         run: |
           cd examples/host
           nmake
-          rm main.c makefile README.md
 
       - name: Delete source files from bundle
         run: |
