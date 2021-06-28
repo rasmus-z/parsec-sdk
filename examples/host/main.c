@@ -9,14 +9,14 @@
 		#define BITS 64
 	#endif
 	#if (BITS == 64)
-		#define SDK_PATH "../../sdk/windows/parsec.dll"
+		#define SDK_PATH "./parsec.dll"
 	#else
-		#define SDK_PATH "../../sdk/windows/parsec32.dll"
+		#define SDK_PATH "./parsec32.dll"
 	#endif
 #elif defined(__APPLE__)
-	#define SDK_PATH "../../sdk/macos/libparsec.dylib"
+	#define SDK_PATH "./libparsec.dylib"
 #else
-	#define SDK_PATH "../../sdk/linux/libparsec.so"
+	#define SDK_PATH "./libparsec.so"
 #endif
 
 static void logCallback(ParsecLogLevel level, const char *msg, void *opaque)
