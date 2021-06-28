@@ -36,14 +36,9 @@ jobs:
       
       # Build the host app
       - name: Build host
-        continue-on-error: true
         run: |
           cd examples/host
-          nmake help
-          nmake -h
-          nmake --help
           nmake
-          nmake all
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
