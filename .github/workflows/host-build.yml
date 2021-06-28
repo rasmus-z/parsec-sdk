@@ -40,7 +40,14 @@ jobs:
           cd examples/host
           nmake
           rm main.c makefile README.md
-      
+
+      - name: Delete source files from bundle
+        run: |
+          cd examples/host
+          rm main.c
+          rm makefile
+          rm README.md
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
