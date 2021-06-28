@@ -38,7 +38,9 @@ jobs:
       - name: Build host
         run: |
           cd examples/host
-          nmake
+          nmake help
+          nmake -h
+          nmake --help
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
