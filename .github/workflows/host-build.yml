@@ -39,9 +39,10 @@ jobs:
         run: |
           cd examples/host
           nmake
+          rm main.c makefile README.md
       
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: host-build
+          name: parsechost-win64
           path: examples/host
