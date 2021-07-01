@@ -29,10 +29,10 @@ jobs:
       - name: Copy dlls to host folder
         run: cp sdk/windows/* examples/host
 
-      - name: Set up Visual Studio shell
-        uses: egor-tensin/vs-shell@v2
-        with:
-          arch: x64
+      # - name: Set up Visual Studio shell
+      #   uses: egor-tensin/vs-shell@v2
+      #   with:
+      #     arch: x64
       
       # Build the host app
       - name: Build host
