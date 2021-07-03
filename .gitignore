@@ -6,6 +6,8 @@
 *.ilk
 *.o
 
+.vscode
+
 .DS_Store
 
 examples/host/host.exe

@@ -27,7 +27,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Copy dlls to host folder
-        run: cp sdk/windows/* examples/host
+        run: |
+          cp sdk/windows/parsec.dll examples/host
+          cp sdk/parsec-dso.h examples/host
+          cp sdk/parsec.h examples/host
 
       - name: Set up Visual Studio shell
         uses: egor-tensin/vs-shell@v2
@@ -46,6 +49,8 @@ jobs:
           rm main.c
           rm makefile
           rm README.md
+          rm parsec-dso.h
+          rm parsec.h
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
